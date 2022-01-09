@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <form action="http://nathandharris.com/NM/candidates/fans.php" method="post">
+    <form action="http://nateharr.is/NM/candidates/fans.php" method="post">
         Last Name:
         <input type="text" name="lastname">
         <br>

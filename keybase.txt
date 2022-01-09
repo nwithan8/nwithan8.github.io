@@ -80,7 +80,7 @@ https://keybase.io/nwithan8
 
 I hereby claim:
 
-  * I am an admin of https://nathandharris.com
+  * I am an admin of https://nateharr.is
   * I am nwithan8 (https://keybase.io/nwithan8) on keybase.
   * I have a public key with fingerprint AA45 A76B 9426 0C66 C4C0  9042 4F8A 11F3 B8CA 98C1
 
@@ -108,7 +108,7 @@ To do so, I am signing this object:
       ]
     },
     "service": {
-      "hostname": "nathandharris.com",
+      "hostname": "nateharr.is",
       "protocol": "https:"
     },
     "type": "web_service_binding",
