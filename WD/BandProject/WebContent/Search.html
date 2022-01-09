@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="css/creative.min.css" rel="stylesheet">
+    <script src="js/animate.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>EasyGig</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/creative.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top"onload="movethem()" style="background-color:none;">
+    <style>
+       #searchradiobuttons {
+            display: none;
+        }
+
+        #b1,
+        #b3,
+        #b5,
+        #b7,
+        #b9,
+        #b11,
+        #b13,
+        #b15,
+        #b17,
+        #b19,
+        #b21,
+        #b23,
+        #b25,
+        #b27,
+        #b29{
+            background-color: #132e1d;
+            opacity: .5;
+        }
+
+        #b2,
+        #b4,
+        #b6,
+        #b8,
+        #b10,
+        #b12,
+        #b14,
+        #b16,
+        #b18,
+        #b20,
+        #b22,
+        #b24,
+        #b26,
+        #b28,
+        #b30{
+            background-color: #224730;
+            opacity: .5;
+        }
+
+        #bars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0px;
+            top: 0px;
+            z-index: -1;
+        }
+
+        #bartable {
+            width: 100%;
+            height: 100%;
+        }
+
+        #bartable td {
+            padding: 1px;
+            vertical-align: bottom;
+        }
+
+        #background {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: -2;
+            width: 100%;
+            height: 100%;
+            background-image: url(img/header2small.jpg)
+        }
+    </style>
+
+     <nav class="nav">
+        <div class="nav-header">
+            <span id="title" style="text-decoration:none;">EasyGig</span>
+            <ul class="menu">
+                <li class="bar">
+                    <a href="Login.html" style="color:white;">Login</a>
+                </li>
+                <li class="bar">
+                    <a href="AboutUs.html" style="color:white;">About</a>
+                </li>
+                <li class="bar">
+                    <a href="Help.html" style="color:white;">Help</a>
+                </li>
+                <li class="bar">
+                    <a href="Search.html" style="color:white;">Search</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header style="height:250px;">
+        <center>
+          <h1>Search For Bands or Venues</h1>
+                        <input id="band" type="radio" name="searchtype" value="band"> Band
+                        <input id="venue" type="radio" name="searchtype" value="venue"> Venue
+                <form class="searchbar" action = "http://nathandharris.com/WD/BandProject/WebContent/OpenProfile" method="post" style="padding-top:100px; background-color:transparent; color: #557c33">
+                    <input id="searcher" list="searchchoices" type="search" name="search" onclick="displaysearchtypes();" placeholder="Search band, venue, genre..." style="padding-left:20px; width:70%; height:50px; background-color:transparent; border:2px solid #ccc; border-radius:20px; color:white; font-weight:bold;" onkeyup="showResult(this.value);" required>
+                  <input name="typeofsearch" id="typeofsearch" type="search" style="display:none;" value="band">
+                    <input type="submit" style="position: absolute; left: -9999px"/>
+
+                     <div id="livesearch">
+
+                    <datalist id="searchchoices">
+                        <option value="Demo Band">
+                        <option value="Demo Venue">
+                        <option value="Demo Genre">
+                    </datalist>
+                    <br>
+                    <div id="searchradiobuttons">
+
+                    </div>
+                </form>
+
+                <script>
+                function changeResults(str){
+                    document.getElementById('searcher').value = str;
+                    }
+                </script>
+                
+                <script>
+                
+function showResult(str) {
+  if (str.length==0) {
+    document.getElementById("livesearch").innerHTML="";
+    document.getElementById("livesearch").style.border="0px";
+    return;
+  }
+  if (window.XMLHttpRequest) {
+    // code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+  } else {  // code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("livesearch").innerHTML=this.responseText;
+      document.getElementById("livesearch").style.border="1px solid #A5ACB2";
+    }
+  }
+  var queryType;
+  if(document.getElementById('band').checked){
+	  queryType="band";
+	  document.getElementById("typeofsearch").value="band";
+	  }else if(document.getElementById('venue').checked){
+	  queryType="venue";
+	  document.getElementById("typeofsearch").value="venue";
+
+	  }
+
+  xmlhttp.open("GET","livesearch?q="+str+"&searchtype="+queryType,true);
+  xmlhttp.send();
+}
+</script>
+        </center>
+        <div id="bars">
+                <table id="bartable">
+                    <tr>
+                        <td>
+                            <div id="b1"></div>
+                        </td>
+                        <td>
+                            <div id="b2"></div>
+                        </td>
+                        <td>
+                            <div id="b3"></div>
+                        </td>
+                        <td>
+                            <div id="b4"></div>
+                        </td>
+                        <td>
+                            <div id="b5"></div>
+                        </td>
+                        <td>
+                            <div id="b6"></div>
+                        </td>
+                        <td>
+                            <div id="b7"></div>
+                        </td>
+                        <td>
+                            <div id="b8"></div>
+                        </td>
+                        <td>
+                            <div id="b9"></div>
+                        </td>
+                        <td>
+                            <div id="b10"></div>
+                        </td>
+                        <td>
+                            <div id="b11"></div>
+                        </td>
+                        <td>
+                            <div id="b12"></div>
+                        </td>
+                        <td>
+                            <div id="b13"></div>
+                        </td>
+                        <td>
+                            <div id="b14"></div>
+                        </td>
+                        <td>
+                            <div id="b15"></div>
+                        </td>
+                        <td>
+                            <div id="b16"></div>
+                        </td>
+                        <td>
+                            <div id="b17"></div>
+                        </td>
+                        <td>
+                            <div id="b18"></div>
+                        </td>
+                        <td>
+                            <div id="b19"></div>
+                        </td>
+                        <td>
+                            <div id="b20"></div>
+                        </td>
+                        <td>
+                            <div id="b21"></div>
+                        </td>
+                        <td>
+                            <div id="b22"></div>
+                        </td>
+                        <td>
+                            <div id="b23"></div>
+                        </td>
+                        <td>
+                            <div id="b24"></div>
+                        </td>
+                        <td>
+                            <div id="b25"></div>
+                        </td>
+                        <td>
+                            <div id="b26"></div>
+                        </td>
+                        <td>
+                            <div id="b27"></div>
+                        </td>
+                        <td>
+                            <div id="b28"></div>
+                        </td>
+                        <td>
+                            <div id="b29"></div>
+                        </td>
+                        <td>
+                            <div id="b30"></div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="background"></div>
+    </header>
+
+
+</body>
+
+</html>

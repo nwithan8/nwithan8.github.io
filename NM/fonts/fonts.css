@@ -1,0 +1,15 @@
+@font-face { 
+font-family: 'bloody'; 
+src: url('BLOODY.ttf') ;}
+
+@font-face { 
+font-family: 'firecat'; 
+src: url('FirecatMedium.ttf') ;}
+
+.bloody {
+    font-family: bloody;
+}
+
+.firecat {
+    font-family: firecat;
+}

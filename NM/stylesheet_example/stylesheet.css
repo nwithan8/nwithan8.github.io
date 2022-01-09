@@ -1,0 +1,32 @@
+.style1 {font-size: 9px}
+.style2 {
+    font-size: 37px;
+    text-transform: uppercase;
+}
+.style3 {
+    font-size: 20px;
+    text-transform: lowercase; 
+}
+
+.style4 {
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 13px;
+	font-style: italic;
+	color: #8d8235;
+    letter-spacing: 2px;
+}
+
+.style5 {
+	color: #9966FF;
+	font-family: Helvetica;
+	font-size: 34px;
+    text-shadow: 2px 2px #ff0000;
+}
+
+.newstyle {
+    color: #a4e657;
+    font-family: "Roboto";
+    font-size: 43px;
+    letter-spacing: normal;
+    font-stretch: semi-expanded;
+]

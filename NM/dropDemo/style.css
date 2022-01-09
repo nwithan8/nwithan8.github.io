@@ -1,0 +1,59 @@
+#holder {
+    width: 1800px;
+    height: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #93B1C6;
+}
+
+#banner {
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    font-size: 34px;
+    padding-top: 20px;
+    font-family: 'Lobster', cursive;
+}
+
+body {
+    background-color: #C7D0D5;
+}
+
+.draggable {
+    width: 160px;
+    height: 200px;
+    float: left;
+    align-content: center;
+    padding: 10px 10px 10px 10px;
+}
+
+#droppable {
+    width: 200px;
+    height: 200px;
+    float: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+    border-width: 3px;
+    border: 5px solid #000000;
+    border-radius: 28px;
+    font-size: 33px;
+    text-align: center;
+}
+
+.divholder {
+    float: left;
+}
+
+#munk {
+    position: absolute;
+    top: 600px;
+    left: 400px;
+    height: 100px;
+    width: 100px;
+    background-color: #f8f807;
+    border-radius: 45px;
+    border: 1px solid #000000;
+}

@@ -1,0 +1,13 @@
+#point1, #point2, #point3, #point4, #point5 {
+    display: none;
+    position: absolute;
+}
+
+#object {
+    position: absolute;
+    display: none;
+}
+
+#code {
+    display: none;
+}

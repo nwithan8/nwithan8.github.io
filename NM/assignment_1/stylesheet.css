@@ -1,0 +1,15 @@
+body {
+    font-size: 70px;
+}
+
+#nav {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: blue;
+}

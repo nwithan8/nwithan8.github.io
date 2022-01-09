@@ -1,0 +1,164 @@
+==================================================================
+https://keybase.io/nwithan8
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://nateharr.is
+  * I am nwithan8 (https://keybase.io/nwithan8) on keybase.
+  * I have a public key with fingerprint AA45 A76B 9426 0C66 C4C0  9042 4F8A 11F3 B8CA 98C1
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101f9ce379fca9d37eb481563a1cc156d71fe33427fe8215e5b99d6c2be9431e9cb0a",
+      "fingerprint": "aa45a76b94260c66c4c090424f8a11f3b8ca98c1",
+      "host": "keybase.io",
+      "key_id": "4f8a11f3b8ca98c1",
+      "kid": "0101f9ce379fca9d37eb481563a1cc156d71fe33427fe8215e5b99d6c2be9431e9cb0a",
+      "uid": "085495a1ef3dbcc196baf228bdeda019",
+      "username": "nwithan8"
+    },
+    "service": {
+      "hostname": "nateharr.is",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1597858689,
+  "expire_in": 157680000,
+  "prev": "53fef6221a122d9e5479b80a6686879b7dd37a4c64253f33c06e4b4ab8b39a39",
+  "seqno": 92,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.13
+Comment: https://keybase.io/crypto
+
+yMNBAnicrVJrTBRXFF7AQrrgiiQV6Us72oApj3nvDKJBt0RBKyoWpFLXOzN3YHjs
+LrMDKxUwgI1ADNqkCoqFmsbaRJFiGwqtqSCkFaRArNBtBOuGYkSxVXYpRZH2rq3/
++rP3z7n33O/7zndOTvdCP53eJ7l6sbutt67T52pnbYHOvEYs24cJVqkIi92H5cCn
+AeZK0K6ZcxQJi8VwAidkXoSUkZdFwEuUEQo0RzAsBQhRRFEyEjKkKJo0ypAjCQYy
+As9LrEgKkKcpAvKigAMsEpMVSyZUbapi0ZAsADQDjKzA0ySLiywr0iLO4zRJyxwg
+CJkSOFSMEwlEzLLavQxkTgB2GK1YUQ49zE/t/Qf+f/Zd8I8cx9A8AwgoU5KA+Dwr
+AJkkOUGCEsAJ3gu0Q9UC8iBCWxyKlgUsHFYSiaFsoSJC72C9nTxDAA1mAVWNVuyI
+alOtmlW05qKPLE2z2WO9RK3I5kU6oGD+V8MsKBYJjRExCqFqV6wWLJZASFFTvKIE
+wxs5hmM5PhKDe22KCs2KF8EYWQ5Hx1sHFiJJhpKhzJIkAQiSlHjI0EZe4HDAsoiM
+rkYJjQvQIkuTCEpRIs5CWqCBwAkUDyhvs3aYb7FisTyJfIJMpGlXMlFPBSrESi53
+ZizQ+eh1/s/5ov0q1+mfD362dUsag3WHbYG0irccHgluCtl0zKxsamr9IoXzC/1m
+Ub9jUd5r7iPJL7TNJISMn7tjYDbI/qvomPHuN8/dNXVXHPPMVRmu+N+MH0q8tfFB
+55eFl/uTDlZee8s1O/guvHjWsx+fDvqkZNtoTYxjTjqwvKsU052JcycsDViWcVzc
+Q1cERFHWMLktxzE5fG9XbdeMbdb6QVN0XXzeytXJjaseNWtp5R8mNI9MFZYlNRyt
+a+0cbvhhzc7o7RM7678740prSSOTWhR3y6Fo4o0ZQ43n05H6wbHd+RGh0oXA7mIt
+39NlWnvLNGr+6dfXf273GK4c7fl6fnN2/Eu7H/fUnQrPHZpaMake94wNNGyd+r3h
+xRRHQPsTwayXtvhuSLzYeG/qHfspZ78YOb805sDt81uV91zpP95kUhea4sdB36Pe
+V+NSLOc7Pp7NHm3M3Za67nZgtbNaS9zM6WqZayuc0g2/Cfe36fhw/cOHKx/7vPJ2
+iTP8xEdlxdOnK69P8B0LivUHh5TxxryB8nVUxN1Ly4KuL7/v6pnePna1dE4f9Jkz
+Kdx16E7Yn3kvf5+tDr6fWnmy6o8Hrak1ZO+SyZpm37V9oRPzv4VECZeEiPQT5v3r
+/6oweFI7Thft6tfafrl/pD8savqJaXXcjQvtBaytLmdgr87gCq46W/557Z5pZ0Zp
+0Y6vpnJ3rI83NW9h+gT33wjdzT0=
+=02eV
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/nwithan8
+
+==================================================================
+
+
+==================================================================
+https://keybase.io/nwithan8
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://nathandharris.com
+  * I am nwithan8 (https://keybase.io/nwithan8) on keybase.
+  * I have a public key with fingerprint AA45 A76B 9426 0C66 C4C0  9042 4F8A 11F3 B8CA 98C1
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101f9ce379fca9d37eb481563a1cc156d71fe33427fe8215e5b99d6c2be9431e9cb0a",
+      "fingerprint": "aa45a76b94260c66c4c090424f8a11f3b8ca98c1",
+      "host": "keybase.io",
+      "key_id": "4f8a11f3b8ca98c1",
+      "kid": "0101f9ce379fca9d37eb481563a1cc156d71fe33427fe8215e5b99d6c2be9431e9cb0a",
+      "uid": "085495a1ef3dbcc196baf228bdeda019",
+      "username": "nwithan8"
+    },
+    "merkle_root": {
+      "ctime": 1597858504,
+      "hash_meta": "ae8902ce89c10d41458400cb9778c876a62dce27501664bcfe99095b09e9bbdf",
+      "seqno": 17324663
+    },
+    "revoke": {
+      "sig_ids": [
+        "856bd827ed7e0eff6300a1fd8cc5abe2240cfebd270cba2ad9b5876fbbf622670f"
+      ]
+    },
+    "service": {
+      "hostname": "nathandharris.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1597858508,
+  "expire_in": 157680000,
+  "prev": "2a10ff0d5e40dd7121ccbc4b49f869522f6e95d6321eb3ded6a901efa6764255",
+  "seqno": 91,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.13
+Comment: https://keybase.io/crypto
+
+yMPcAnicrVN5bBVFHG5LDwRquQoRMcCWKwLN7Ow5L1I0GESO0Ecsh6W+zszOtutr
+3yv7Xl9bS62AnLaVcgUEDKmIFVEMtJVAFYq0iTzkSOQIV1tbYorUQhFpJBZnUWJi
+/NP9Yya78/2+7/t9v52T8X0i+kXOWz/o3uFT2xoiwyeW5Ud4ppLTxQLxG0WCq1jw
+sscbyzFYIOjxWobgEoAIRBNRJmnIpBgZksaIrIuKKmGRUr4bmmgySZKhZjIdigpT
+CEKGSiFhSJZEhigBWJgsmJYvi9l5tuULclqMZQVrKkEyVAFVVSpTgIAMZVPHomhK
+ROdiOhV5YbY/4FRwcwQHWLLl59/4i+exvf/A/8++8/+i0xUZKVhkpmQQXo9Ugk0I
+dWIwAwMROcAAs304l3G0r8AKZmOfLpRMFnKZ7c1hHtvvDzrh0qDlQEQFabqiK0Dm
+DeJAtieXBbGTC9MRgJSvVASGLMqKLgNACdI0neqailVoUAY1BYiqKhNqMoQAUghA
+DBFimNxHgC31+bmCJkFZVSVuwWYhv5c56gEri+cWEFzpgq6oxNChxgyNAWaaqgQA
+Fk1Dp1TBhEEoA85ODKhxeQyxgYjCDZiEmCqEqgZMIaPEUbNDFn1M7gzqSQDY6d/I
+xrZtBZKpP5f7yrP9QT/15/Dj7GAwL+By0gkW5Tn4AkY8fzN5iOUz+L/CK0LMDlh+
+H++FI/8dnD5ZYIV5ls08loNQNFUH/HF0WIhTQiwC0wSGwmRg8GFDPnZCZSIjU1eR
+AqGpMqQYqgRFRiQ+RhUjwOeLVU2VoaL8kyQSuU+cxTl5fLyzfJsJJScalkRHRPaL
+iI2Jci5RRL+nBj65WhX5Cb3KmLHfzN00dNGK4p65jzLJ/fHHr9esm71y+YvLP1wU
+O3PWbzsO3Nk3SF6xuLKy/NQeuiBUerbljXrvnLiyYd61Te2hzBu7WjfDEU29o6nc
+9Oql3NDVpClt5fH1MeKkPSPLh6SByP733K+XDX/bbi85Y2TtLW2eHn8lpvJm6dGn
+2wtfnnC+Y3xpW0ZluOXgwh2vhMb07HInbtzw4L2o3r2dUZPM3UNjLnvvhneevFc8
+XHbPPZ0w/cD2cR9F9zQf63LBi4mNM8+O7roz//rNy5vf7//C51bt/N/NtOZVF5JT
+1sXuMPe/9oyv7GG7F8x2d9SnpqfV1cdpAevOwa996/u0llc8bDy2NbJ6f8yxxTCj
++o+tdc/WdHaVx6f83FOXdKF3ZU73ODdqSB1c3XdKw/TkjirPkv2trPbaQvpWy4FN
+G9JrEjLWjPr4xEbj/rRad3jk0YG/fPnrxDN9a3tmz2wt2nDxi1h9Ytvpc99eGnY0
+Rl795q1HHe8+H57/YOmotpz8bVnss10Ns47H3/Usqwh/1Tig8LlbcwYsmmYe6ZjR
+duRQSvPWIWhqVHr0ggnBUHKqO+Wn4a6ixTVCUtPdLbk3cNyWzNQfUhsfFKw6V9d9
+e9bt/Jc6v6+J9pZ1V4evDN7def+akjj2cOLglridV4u7Iz8dkXQqOMr1zifn57VW
+XSrcnjmjacRUafWh79ZU9f1xyr6CD9xdV/4EVY4Nbw==
+=XPw0
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/nwithan8
+
+==================================================================
+

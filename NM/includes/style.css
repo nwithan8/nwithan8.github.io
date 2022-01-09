@@ -1,0 +1,31 @@
+@charset "UTF-8";
+h1 {
+	font-size: 55px;
+	color: #F00;
+}
+a:link {
+	text-decoration: none;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: bold;
+	color: #F00;
+	background-color: #CCC;
+	display: block;
+	margin: 4px;
+	width: 77px;
+	float: left;
+}
+a:hover {
+	background-color: #666;
+}
+.allinks {
+	display: block;
+	width: 100%;
+	float: left;
+}
+.numm {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 111px;
+	color: #F00;
+}

@@ -1,0 +1,19 @@
+#barsresults {
+    display: none;
+}
+
+#resultbars {
+    display: none;
+}
+
+#filloutform {
+    display: block;
+}
+
+#code {
+    display: none;
+}
+
+#generate {
+    display: block;
+}

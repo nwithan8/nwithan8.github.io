@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathan Harris - New Media</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://code.getmdl.io/1.3.0/material.deep_purple-pink.min.css" rel="stylesheet">
+    <link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+
+    <style>
+        body {
+            margin: 0;
+        }
+        
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        
+        .navbar a:hover {
+            background: #ddd;
+            color: black;
+        }
+        
+        .main {
+            padding: 16px;
+            margin-top: 30px;
+            height: 1500px;
+            /* Used in this example to enable scrolling */
+        }
+        
+        a {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body id="body" onload="scriptislove();">
+    <div class="navbar">
+        <a href="nmindex2.html">Main</a>
+        <a href="bb.html">Digital Brown Bag</a>
+        <a href="nmp.html">New Media Production</a>
+        <a href="rmp.html">Rich Media Production</a>
+        <a href="nmc.html">New Media Capstone</a>
+        <a style="float:right;" onmouseover="" style="cursor:pointer;" onclick="partytime();">Party Time</a>
+        <script>
+            var party = false;
+            var audio = new Audio('partytime.mp3');
+
+            function partytime() {
+                if (party == false) {
+                    document.getElementById("body").style.backgroundImage = "url(back.gif)";
+                    party = true;
+                    tastetherainbow();
+                    audio.loop = true;
+                    audio.play();
+                    flippy();
+                } else {
+                    document.getElementById("body").style.backgroundImage = "none";
+                    party = false;
+                    clearInterval(timeout);
+                    document.getElementById("text").style.color = "initial";
+                    audio.pause();
+                    audio.load();
+                    badflippy();
+                }
+            }
+        </script>
+    </div>
+
+    <center>
+        <br>
+        <br>
+        <br>
+        <h5>Digital Brown Bag</h5>
+        <p id="text">There's no sense in lying. This class was nothing more than a semester-long waste of time.</p><p>The speakers were irrelevant to anything I care about or would care about, and while I paid attention, it's clear just by looking around the room that no one wants to be there, and if it weren't required attendance, no one would.</p><p>Despite my attentiveness, I learned nothing about new media, emerging media, digital media, or any kind of media from this class.</p><p>The New Media Institute would be better off scrapping this course entirely in exchange for something else, anything else.</p>
+        
+    </center>
+    
+    <script>
+        var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "purple"];
+        var sentence = "";
+        var timeout;
+        var j = 0;
+        var newSentence = "";
+
+        function tastetherainbow() {
+            var sentence = document.getElementById("text").textContent.trim();
+            timeout = setInterval(betherainbow, 100);
+        }
+
+        function betherainbow() {
+            if (j > 6) {
+                j = 0;
+            }
+            document.getElementById("text").style.color = colors[j];
+            j++;
+        }
+    </script>
+</body>
+
+</html>

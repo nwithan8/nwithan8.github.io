@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mr. Potato Head</title>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script>
+        var zindie = 1;
+        $(function() {
+            $('img').draggable();
+            $('img').mousedown(function() {
+                zindie += 1;
+                $(this).css("z-index", zindie);
+            })
+            $('img').dblclick(function() {
+                zindie = 1;
+                $(this).css("z-index", zindie);
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <img src="face.gif" width="347" height="581">
+    <img src="hair.gif" width="416" height="322">
+    <img src="nose3.gif" width="88" height="143">
+    <img src="nose2.gif" width="110" height="132">
+    <img src="nose1.gif" width="155" height="159">
+    <img src="moustache.gif" width="243" height="69">
+    <img src="eyes2.gif" width="149" height="43">
+    <img src="eye1.gif" width="213" height="120">
+    <img src="earright.gif" width="109" height="193">
+    <img src="earleft.gif" width="109" height="193">
+    <img src="bigearleft.gif" width="202" height="249">
+    <img src="bigearight.gif" width="202" height="249">
+    <img src="beard2.gif" width="205" height="196">
+    <img src="beard1.gif" width="172" height="149">
+    <img src="mouth3.gif" width="218" height="142">
+    <img src="mouth2.gif" width="240" height="130">
+    <img src="mouth1.gif" width="239" height="100">
+</body>
+
+</html>

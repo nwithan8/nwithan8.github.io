@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Droppable Demo</title>
+    <link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC:400,700italic' rel='stylesheet' type='text/css'>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="func.js">
+    </script>
+
+
+</head>
+
+<body>
+    <div id="holder">
+        <div id="banner">The Technically Speaking podcast</div>
+
+        <div id="droppable" ondrop="dropit();">
+            <p>Drop here to play</p>
+        </div>
+
+        <div class="divholder">
+
+            <div class="draggable" ondrag="dragit('Pilot','https://ia801204.us.archive.org/30/items/technically_speaking_1/podcast.mp3');"> <img src="thumbnail.png"><h3>Episode 1</h3></div>
+
+            <div class="draggable" ondrag="dragit('Pixels and Daydream and Home, Oh My!','https://ia601209.us.archive.org/5/items/technically_speaking_2/ep2.mp3');"> <img src="thumbnail.png"><h3>Episode 2</h3></div>
+
+            <div class="draggable" ondrag="dragit('All the acronyms','https://ia601208.us.archive.org/9/items/technically_speaking_3/ep3.mp3');"> <img src="thumbnail.png"><h3>Episode 3</h3></div>
+
+            <div class="draggable" ondrag="dragit('Internet Crashes and Company Clashes','https://ia801209.us.archive.org/28/items/technically_speaking_4/ep4.mp3');"> <img src="thumbnail.png"><h3>Episode 4</h3></div>
+
+            <div class="draggable" ondrag="dragit('Switch-eroo','https://ia801905.us.archive.org/31/items/technically_speaking_5/ep5.mp3');"> <img src="thumbnail.png"><h3>Episode 5</h3></div>
+
+            <div class="draggable" ondrag="dragit('Seize the Dongle','https://ia601906.us.archive.org/6/items/technically_speaking_6/ep6.mp3');"> <img src="thumbnail.png"><h3>Episode 6</h3></div>
+
+            <div class="draggable" ondrag="dragit('A Whole New (Virtual) World','https://ia801907.us.archive.org/3/items/technically_speaking_7/ep7.mp3');"> <img src="thumbnail.png"><h3>Episode 7</h3></div>
+
+            <div class="draggable" ondrag="dragit('Spanglish in France','https://ia601905.us.archive.org/25/items/technically_speaking_8/ep8.mp3');"> <img src="thumbnail.png"><h3>Episode 8</h3></div>
+
+            <div class="draggable" ondrag="dragit('Christines Granddaughter','https://ia801907.us.archive.org/15/items/technically_speaking_9/ep9.mp3');"> <img src="thumbnail.png"><h3>Episode 9</h3></div>
+
+            <div class="draggable" ondrag="dragit('Who is Taking A Note While Swimming?','https://ia801903.us.archive.org/22/items/technically_speaking_10/ep10.mp3');"> <img src="thumbnail.png"><h3>Episode 10</h3></div>
+
+            <div class="draggable" ondrag="dragit('Night of the Living Craig','https://ia601006.us.archive.org/29/items/technically_speaking_11/ep11.mp3');"> <img src="thumbnail.png"><h3>Episode 11</h3></div>
+
+            <div class="draggable" ondrag="dragit('Regrettable Purchases','https://ia601500.us.archive.org/32/items/technically_speaking_12/ep12.mp3');"> <img src="thumbnail.png"><h3>Episode 12</h3></div>
+
+            <div class="draggable" ondrag="dragit('To Unlimited and Beyond','https://ia601505.us.archive.org/14/items/technically_speaking_13/ep13.mp3');"> <img src="thumbnail.png"><h3>Episode 13</h3></div>
+
+            <div class="draggable" ondrag="dragit('A LinkedIn Request to the FCC Chairman','https://ia601504.us.archive.org/25/items/technically_speaking_14/ep14.mp3');"> <img src="thumbnail.png"><h3>Episode 14</h3></div>
+            
+        </div>
+        
+        </div>
+
+        <div id="player"></div>
+        <div id="munk">
+        </div>
+</body>
+
+</html>

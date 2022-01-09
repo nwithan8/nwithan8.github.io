@@ -1,0 +1,22 @@
+html, body {
+    font-family: 'Roboto';
+    font-size: 24px;
+    background-color: #e5e7ea;
+    color: black;
+}
+.name {
+    font-size: 80px;
+}
+.headers{
+    font-size: 24px;
+    color: black;
+}
+.links{
+    color: red;
+    font-size: 18px;
+    text-decoration: none;
+}
+a:hover {  
+        color: red;
+        text-decoration: none;
+}

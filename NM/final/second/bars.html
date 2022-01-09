@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="bars-smooth.js"></script>
+    <script src="bars-random.js"></script>
+    <script src="bars.js"></script>
+    <script src="barresults.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Animations - Bars</title>
+    <link rel="stylesheet" href="bars.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</head>
+
+<body onload="demobarssmooth(); demobarsrandom()">
+
+    <div class="demo-card-wide mdl-card mdl-shadow--2dp" style="width:100%;">
+        <div class="mdl-card__supporting-text">
+            <table style="width:100%;">
+                <tr>
+                    <td>
+                        <div id="filloutform">
+                            <table>
+                                <form id="values">
+                                    <tr>
+                                        <td>
+                                            Number of Bars (1-60):
+                                        </td>
+                                        <td>
+                                            <input type="number" name="numBars" min="1" max="60" onchange="printcode();" onkeyup="printcode();" style="width:40%;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Height (1-500px):
+                                        </td>
+                                        <td>
+                                            <input type="number" name="height" min="1" max="500" onchange="printcode();" onkeyup="printcode();" style="width:40%;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Speed (in ms, smaller is faster):
+                                        </td>
+                                        <td>
+                                            <input type="number" name="speed" min="1" onchange="printcode();" onkeyup="printcode();" style="width:40%;">
+                                            <button id="tt1" class="mdl-button mdl-js-button mdl-button--icon" onmouseover="showexamples();" onmouseout="hideexamples();">
+                                                <i class="fa fa-question" style="font-size:18px; vertical-align: middle;"></i>
+                                            </button>
+                                            <div class="mdl-tooltip" data-mdl-for="tt1">
+                                                What does this mean?
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Type:
+                                        </td>
+                                        <td>
+                                            <select name="type" onchange="printcode();" onkeyup="printcode();" style="width:42%;">
+                                                <option value="smooth">Smooth</option>
+                                                <option value="random">Random</option>
+                                            </select>
+                                            <button id="tt2" class="mdl-button mdl-js-button mdl-button--icon" onmouseover="showexamples();" onmouseout="hideexamples();">
+                                                <i class="fa fa-question" style="font-size:18px; vertical-align: middle;"></i>
+                                            </button>
+                                            <div class="mdl-tooltip" data-mdl-for="tt2">
+                                                What does this mean?
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <br>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Colors
+                                            <br>(hexcodes, no #, black default)
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                            Opacity
+                                            <br>(0-1)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Color 1:
+                                        </td>
+                                        <td>
+                                            <input type="text" name="color1" onkeyup="getbarcolors();" onkeyup="getbarcolors(); printcode();" onchange="getbarcolors(); printcode();">
+                                        </td>
+                                        <td>
+                                            <input type="number" name="opacity1" min="0" max="1" step="0.1" onkeyup="getbarcolors(); printcode();" onchange="getbarcolors(); printcode();">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Color 2:
+                                        </td>
+                                        <td>
+                                            <input type="text" name="color2" onkeyup="getbarcolors();" onkeyup="getbarcolors(); printcode();" onchange="getbarcolors(); printcode();">
+                                        </td>
+                                        <td>
+                                            <input type="number" name="opacity2" min="0" max="1" step="0.1" onkeyup="getbarcolors(); printcode();" onchange="getbarcolors(); printcode();">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Color 3:
+                                        </td>
+                                        <td>
+                                            <input type="text" name="color3" onkeyup="getbarcolors();" onkeyup="getbarcolors(); printcode();" onchange="getbarcolors(); printcode();">
+                                        </td>
+                                        <td>
+                                            <input type="number" name="opacity3" min="0" max="1" step="0.1" onkeyup="getbarcolors(); printcode();" onchange="getbarcolors(); printcode();">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Color 4:
+                                        </td>
+                                        <td>
+                                            <input type="text" name="color4" onkeyup="getbarcolors();" onkeyup="getbarcolors(); printcode();" onchange="getbarcolors(); printcode();">
+                                        </td>
+                                        <td>
+                                            <input type="number" name="opacity4" min="0" max="1" step="0.1" onkeyup="getbarcolors(); printcode();" onchange="getbarcolors(); printcode();">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Color 5:
+                                        </td>
+                                        <td>
+                                            <input type="text" name="color5" onkeyup="getbarcolors();" onkeyup="getbarcolors(); printcode();" onchange="getbarcolors(); printcode();">
+                                        </td>
+                                        <td>
+                                            <input type="number" name="opacity5" min="0" max="1" step="0.1" onkeyup="getbarcolors(); printcode();" onchange="getbarcolors(); printcode();">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Color 6:
+                                        </td>
+                                        <td>
+                                            <input type="text" name="color6" onkeyup="getbarcolors();" onkeyup="getbarcolors(); printcode();" onchange="getbarcolors(); printcode();">
+                                        </td>
+                                        <td>
+                                            <input type="number" name="opacity6" min="0" max="1" step="0.1" onkeyup="getbarcolors(); printcode();" onchange="getbarcolors(); printcode();">
+                                        </td>
+                                    </tr>
+                                </form>
+                            </table>
+                        </div>
+                    </td>
+                    <td>
+                        <div id="demobars" style="width:100%;">
+                            <table id="demobarstable">
+                                <tr>
+                                    <td>
+                                        <div id="db1"></div>
+                                    </td>
+                                    <td>
+                                        <div id="db2"></div>
+                                    </td>
+                                    <td>
+                                        <div id="db3"></div>
+                                    </td>
+                                    <td>
+                                        <div id="db4"></div>
+                                    </td>
+                                    <td>
+                                        <div id="db5"></div>
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                        <div id="db6"></div>
+                                    </td>
+                                    <td>
+                                        <div id="db7"></div>
+                                    </td>
+                                    <td>
+                                        <div id="db8"></div>
+                                    </td>
+                                    <td>
+                                        <div id="db9"></div>
+                                    </td>
+                                    <td>
+                                        <div id="db10"></div>
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                        <div id="db11"></div>
+                                    </td>
+                                    <td>
+                                        <div id="db12"></div>
+                                    </td>
+                                    <td>
+                                        <div id="db13"></div>
+                                    </td>
+                                    <td>
+                                        <div id="db14"></div>
+                                    </td>
+                                    <td>
+                                        <div id="db15"></div>
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                        <div id="db16"></div>
+                                    </td>
+                                    <td>
+                                        <div id="db17"></div>
+                                    </td>
+                                    <td>
+                                        <div id="db18"></div>
+                                    </td>
+                                    <td>
+                                        <div id="db19"></div>
+                                    </td>
+                                    <td>
+                                        <div id="db20"></div>
+                                    </td>
+                                    <td>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table id="tags">
+                                <tr>
+                                    <td>
+                                        Smooth @ 50ms
+                                    </td>
+                                    <td>
+                                        Smooth @ 300ms
+                                    </td>
+                                    <td>
+                                        Random @ 50ms
+                                    </td>
+                                    <td>
+                                        Random @ 300ms
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+            <div id="generate">
+                <a href="bars.html#resultbars"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" onclick="prep(); getbarvalues();">Generate</button></a>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="demo-card-wide mdl-card mdl-shadow--2dp" style="width:100%;" id="resultbars">
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Result</h2>
+        </div>
+        <table id="resultbarstable" style="width:100%;">
+            <tr>
+                <td>
+                    <div id="rb1" class="color1"></div>
+                </td>
+                <td>
+                    <div id="rb2" class="color2"></div>
+                </td>
+                <td>
+                    <div id="rb3" class="color3"></div>
+                </td>
+                <td>
+                    <div id="rb4" class="color4"></div>
+                </td>
+                <td>
+                    <div id="rb5" class="color5"></div>
+                </td>
+                <td>
+                    <div id="rb6" class="color6"></div>
+                </td>
+                <td>
+                    <div id="rb7" class="color1"></div>
+                </td>
+                <td>
+                    <div id="rb8" class="color2"></div>
+                </td>
+                <td>
+                    <div id="rb9" class="color3"></div>
+                </td>
+                <td>
+                    <div id="rb10" class="color4"></div>
+                </td>
+                <td>
+                    <div id="rb11" class="color5"></div>
+                </td>
+                <td>
+                    <div id="rb12" class="color6"></div>
+                </td>
+                <td>
+                    <div id="rb13" class="color1"></div>
+                </td>
+                <td>
+                    <div id="rb14" class="color2"></div>
+                </td>
+                <td>
+                    <div id="rb15" class="color3"></div>
+                </td>
+                <td>
+                    <div id="rb16" class="color4"></div>
+                </td>
+                <td>
+                    <div id="rb17" class="color5"></div>
+                </td>
+                <td>
+                    <div id="rb18" class="color6"></div>
+                </td>
+                <td>
+                    <div id="rb19" class="color1"></div>
+                </td>
+                <td>
+                    <div id="rb20" class="color2"></div>
+                </td>
+                <td>
+                    <div id="rb21" class="color3"></div>
+                </td>
+                <td>
+                    <div id="rb22" class="color4"></div>
+                </td>
+                <td>
+                    <div id="rb23" class="color5"></div>
+                </td>
+                <td>
+                    <div id="rb24" class="color6"></div>
+                </td>
+                <td>
+                    <div id="rb25" class="color1"></div>
+                </td>
+                <td>
+                    <div id="rb26" class="color2"></div>
+                </td>
+                <td>
+                    <div id="rb27" class="color3"></div>
+                </td>
+                <td>
+                    <div id="rb28" class="color4"></div>
+                </td>
+                <td>
+                    <div id="rb29" class="color5"></div>
+                </td>
+                <td>
+                    <div id="rb30" class="color6"></div>
+                </td>
+                <td>
+                    <div id="rb31" class="color1"></div>
+                </td>
+                <td>
+                    <div id="rb32" class="color2"></div>
+                </td>
+                <td>
+                    <div id="rb33" class="color3"></div>
+                </td>
+                <td>
+                    <div id="rb34" class="color4"></div>
+                </td>
+                <td>
+                    <div id="rb35" class="color5"></div>
+                </td>
+                <td>
+                    <div id="rb36" class="color6"></div>
+                </td>
+                <td>
+                    <div id="rb37" class="color1"></div>
+                </td>
+                <td>
+                    <div id="rb38" class="color2"></div>
+                </td>
+                <td>
+                    <div id="rb39" class="color3"></div>
+                </td>
+                <td>
+                    <div id="rb40" class="color4"></div>
+                </td>
+                <td>
+                    <div id="rb41" class="color5"></div>
+                </td>
+                <td>
+                    <div id="rb42" class="color6"></div>
+                </td>
+                <td>
+                    <div id="rb43" class="color1"></div>
+                </td>
+                <td>
+                    <div id="rb44" class="color2"></div>
+                </td>
+                <td>
+                    <div id="rb45" class="color3"></div>
+                </td>
+                <td>
+                    <div id="rb46" class="color4"></div>
+                </td>
+                <td>
+                    <div id="rb47" class="color5"></div>
+                </td>
+                <td>
+                    <div id="rb48" class="color6"></div>
+                </td>
+                <td>
+                    <div id="rb49" class="color1"></div>
+                </td>
+                <td>
+                    <div id="rb50" class="color2"></div>
+                </td>
+                <td>
+                    <div id="rb51" class="color3"></div>
+                </td>
+                <td>
+                    <div id="rb52" class="color4"></div>
+                </td>
+                <td>
+                    <div id="rb53" class="color5"></div>
+                </td>
+                <td>
+                    <div id="rb54" class="color6"></div>
+                </td>
+                <td>
+                    <div id="rb55" class="color1"></div>
+                </td>
+                <td>
+                    <div id="rb56" class="color2"></div>
+                </td>
+                <td>
+                    <div id="rb57" class="color3"></div>
+                </td>
+                <td>
+                    <div id="rb58" class="color4"></div>
+                </td>
+                <td>
+                    <div id="rb59" class="color5"></div>
+                </td>
+                <td>
+                    <div id="rb60" class="color6"></div>
+                </td>
+            </tr>
+        </table>
+        <div class="mdl-card__actions mdl-card--border">
+            <a href="bars.html#code"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" onclick="showcode();">Show code</button></a>
+        </div>
+    </div>
+
+
+    <div id="code">
+        <main class="mdl-layout__content" style="width:100%;">
+            <section class="mdl-grid mdl-grid">
+                <div class="mdl-card mdl-cell mdl-cell--4-col mdl-shadow--2dp">
+                    <div class="mdl-card__supporting-text">
+                        <h3>HTML</h3>
+                        <div id="htmlcode"></div>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-cell mdl-cell--4-col mdl-shadow--2dp">
+                    <div class="mdl-card__supporting-text">
+                        <h3>CSS</h3>
+                        <div id="csscode"></div>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-cell mdl-cell--4-col mdl-shadow--2dp">
+                    <div class="mdl-card__supporting-text">
+                        <h3>Javascript</h3>
+                        <div id="jscode"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+
+</html>

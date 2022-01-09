@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+
+#target {
+	height: 300px;
+	width: 400px;
+	background-color: rgba(153,153,153,1);
+}
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+ <button id="monkey">Click here to Load a Monkey Picture</button>
+  <button id="bird">Click here to Load a Condor</button>
+    <button id="tree">Click here to Load a Tree</button>
+<div id="target">Content for  id "target" Goes Here</div>
+<script> var whichpic=0;
+   $("#monkey").click(function () {
+$('#target').load('1.html');
+  })
+     $("#bird").click(function () {
+$('#target').load('2.html');
+  })
+     $("#tree").click(function () {
+$('#target').load('3.html');
+  })
+</script>
+</body>
+
+</html>

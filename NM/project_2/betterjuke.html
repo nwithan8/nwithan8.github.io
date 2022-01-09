@@ -1,0 +1,251 @@
+<html>
+
+<head>
+    <title>Sorta-fy</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="anim.js"></script>
+    <script src="interact.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function() {
+            $("#sortable").sortable();
+            $("#sortable").disableSelection();
+        });
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mouse.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="func.js">
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('.data').mouseover(function(e) {
+                $('#display-text').html($(this).attr('data-source'));
+                $('#display-text').css({
+                    'top': e.pageY + 44,
+                    'left': e.pageX + 44
+                });
+            })
+        })
+    </script>
+    <style>
+        #sortable {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #sortable li {
+            margin: 0 3px 3px 3px;
+            padding: 0.4em;
+            padding-left: 1.5em;
+        }
+        
+        #sortable li span {
+            position: absolute;
+            margin-left: -1.3em;
+        }
+        
+        #result {
+            background-color: #25282d;
+            color: black;
+            text-align: center;
+            width: 44%;
+            height: 70%;
+            position: absolute;
+            left: 50%;
+            display: none;
+            z-index: 0;
+            box-shadow: 3px 3px 5px #888888;
+        }
+        
+        #music {
+            float: left;
+            width: 100%;
+            height: 77%;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body onload="goodsoul()">
+
+    <div class="bkg"></div>
+
+    <div id="holder">
+        <div id="progress">
+            <div id="bar"></div>
+            <div id="time"></div>
+        </div>
+        
+        <div id="banner">I &hearts; Classic Rock</div>
+
+        <div id="music">
+
+            <ul id="sortable">
+
+                <div id="listing">
+                    <table id="track">
+                        <tr>
+                            <td>
+                                <a href="betterjuke.html#" class="data" data-source="Baba ORiley"> <h3 onclick= "song('bor.mp3', 'who.jpg','<h2>Baba O\'Riley<h2>', '<h4>The Who<h4>'); moveit()";>Baba O'Riley</h3></a>
+                            </td>
+                            <td>
+                                <h5>The Who</h5>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="listing">
+                    <table id="track">
+                        <tr>
+                            <td>
+                                <a href="betterjuke.html#" class="data" data-source="Free Bird"> <h3 onclick= "song('fb.mp3', 'ls.jpg','<h2>Free Bird<h2>', '<h4>Lynyrd Skynyrd<h4>'); moveit()";>Free Bird</h3></a>
+                            </td>
+                            <td>
+                                <h5>Lynyrd Skynyrd</h5>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="listing">
+                    <table id="track">
+                        <tr>
+                            <td>
+                                <a href="betterjuke.html#" class="data" data-source="Hotel California"> <h3 onclick= "song('hc.mp3', 'eagles.jpg','<h2>Hotel California<h2>', '<h4>Eagles<h4>'); moveit()";>Hotel California</h3></a>
+                            </td>
+                            <td>
+                                <h5>Eagles</h5>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="listing">
+                    <table id="track">
+                        <tr>
+                            <td>
+                                <a href="betterjuke.html#" class="data" data-source="Carry On Wayward Son"> <h3 onclick= "song('cows.mp3', 'kansas.jpg','<h2>Carry On Wayward Son<h2>', '<h4>Kansas<h4>'); moveit()">Carry On Wayward Son</h3></a>
+                            </td>
+                            <td>
+                                <h5>Kansas</h5>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div id="listing">
+                    <table id="track">
+                        <tr>
+                            <td>
+                                <a href="betterjuke.html#" class="data" data-source="Layla"> <h3 onclick= "song('layla.mp3', 'clapton.jpg','<h2>Layla<h2>', '<h4>Eric Clapton<h4>'); moveit()";>Layla</h3></a>
+                            </td>
+                            <td>
+                                <h5>Eric Clapton</h5>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div id="listing">
+                    <table id="track">
+                        <tr>
+                            <td>
+                                <a href="betterjuke.html#" class="data" data-source="All Along the Watchtower"> <h3 onclick= "song('aatw.mp3', 'hendrix.jpg','<h2>All Along the Watchtower<h2>', '<h4>Jimi Hendrix<h4>'); moveit()";>All Along the Watchtower</h3></a>
+                            </td>
+                            <td>
+                                <h5>Jimi Hendrix</h5>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div id="listing">
+                    <table id="track">
+                        <tr>
+                            <td>
+                                <a href="betterjuke.html#" class="data" data-source="Comfortably Numb"> <h3 onclick= "song('cn.mp3', 'pink.jpg','<h2>Comfortably Numb<h2>', '<h4>Pink Floyd<h4>'); moveit()";>Comfortably Numb</h3></a>
+                            </td>
+                            <td>
+                                <h5>Pink Floyd</h5>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div id="listing">
+                    <table id="track">
+                        <tr>
+                            <td>
+                                <a href="betterjuke.html#" class="data" data-source="Break On Through"> <h3 onclick= "song('bot.mp3', 'doors.jpg','<h2>Break On Through<h2>', '<h4>The Doors<h4>'); moveit()";>Break On Through</h3></a>
+                            </td>
+                            <td>
+                                <h5>The Doors</h5>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div id="listing">
+                    <table id="track">
+                        <tr>
+                            <td>
+                                <a href="betterjuke.html#" class="data" data-source="Money for Nothing"> <h3 onclick= "song('mfn.mp3', 'ds.jpg','<h2>Money for Nothing<h2>', '<h4>Dire Straits<h4>'); moveit()";>Money for Nothing</h3></a>
+                            </td>
+                            <td>
+                                <h5>Dire Straits</h5>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div id="listing">
+                    <table id="track">
+                        <tr>
+                            <td>
+                                <a href="betterjuke.html#" class="data" data-source="Gimme Shelter"> <h3 onclick= "song('gs.mp3', 'stones.jpg','<h2>Gimme Shelter<h2>', '<h4>The Rolling Stones<h4>'); moveit()";>Gimme Shelter</h3></a>
+                            </td>
+                            <td>
+                                <h5>The Rolling Stones</h5>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div id="listing">
+                    <table id="track">
+                        <tr>
+                            <td>
+                                <a href="betterjuke.html#" class="data" data-source="Highway to Hell"> <h3 onclick= "song('h2h.mp3', 'acdc.jpg','<h2>Highway to Hell<h2>', '<h4>AC/DC<h4>'); moveit()";>Highway to Hell</h3></a>
+                            </td>
+                            <td>
+                                <h5>AC/DC</h5>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <ul id="sortable">
+
+        </div>
+        <div id="snackbar">Classic rock is good for the soul.</div>
+
+        <div id="result" ondrop="dropit();">
+            <audio id="playing">
+              <source src="bor.mp3">
+            </audio>
+            <img id="play" src="play.jpg">
+        </div>  
+
+    </div>
+            
+
+</body>
+
+</html>

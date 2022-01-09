@@ -1,0 +1,95 @@
+html, body {
+    min-width: 600px;
+    font-family: 'Roboto';
+    font-size: 24px;
+    background-color: #e5e7ea;
+    color: black;
+    width: 100%;
+    height: 100%;
+}
+.name {
+    font-size: 80px;
+}
+.small{
+    font-size: 14px;   
+}
+.intro {
+    font-size: 18px;
+}
+.headers{
+    font-size: 24px;
+    color: black;
+}
+.links{
+    color: red;
+    font-size: 18px;
+    text-decoration: none;
+}
+a:hover {  
+        color: red;
+        text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+ul li {
+    display: inline;
+    float: left;
+}
+
+.mydiv {
+    height: auto;
+    width: auto;
+    background-color: #000;
+    color: #5F9E21;
+    float: left;
+    margin-right: 5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #FFF;
+}
+table {
+    border: 0px solid transparent;
+}
+
+.mdl-card {
+  height: auto;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.mdl-card .mdl-card__supporting-text {
+  margin: 40px;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0;
+  color: inherit;
+  width: calc(100% - 80px);
+}
+
+.mdl-card__supporting-text p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+section.section--center {
+ min-width: 500px;
+    width: 1000px;
+}
+
+#container404 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
