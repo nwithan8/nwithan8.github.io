@@ -82,7 +82,7 @@
             position: relative;
             display: inline-block;
         }
-        
+
         .sideup {
             position: relative;
             display: inline-block;
@@ -97,16 +97,16 @@
             background-color: #f1f1f1;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         }
-        
+
         .sideup-content {
             display: none;
             position: absolute;
-            bottom:0px;
+            bottom: 0px;
             left: 100%;
             z-index: 1001;
             min-height: 100%;
             background-color: #f1f1f1;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         }
 
         .dropup-content a {
@@ -115,22 +115,26 @@
             text-decoration: none;
             display: block;
         }
-        
+
         .sideup-content a {
             color: black;
             padding: 12px 16px;
             text-decoration: none;
-            display: block;            
+            display: block;
         }
-        
-        .dropup-content a:hover {background-color: #ddd}
-        
-        .sideup-content a:hover {background-color: #ddd}
+
+        .dropup-content a:hover {
+            background-color: #ddd
+        }
+
+        .sideup-content a:hover {
+            background-color: #ddd
+        }
 
         .dropup:hover .dropup-content {
             display: block;
         }
-        
+
         .sideup:hover .sideup-content {
             display: block;
         }
@@ -151,17 +155,21 @@
             body {
                 background: none;
             }
+
             #footer {
                 width: 100%;
                 position: relative;
             }
+
             #name {
                 padding-left: 10vw;
                 width: 90vw;
             }
+
             #socialname {
                 display: none;
             }
+
             #socialbar {
                 display: contents;
             }
@@ -171,13 +179,16 @@
             body {
                 background: none;
             }
+
             #name {
                 padding-left: 10vw;
                 width: 90vw;
             }
+
             #socialname {
                 display: none;
             }
+
             #socialbar {
                 display: contents;
             }
@@ -190,14 +201,15 @@
     <!---end css--->
 
     <!---fonts--->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en"
+          rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!---end fonts--->
 
     <!---Material Design Elements---->
     <link href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" rel="stylesheet">
     <link rel="import" href="http://cwdoh.com/paper-fab-menu/components/paper-fab-menu/paper-fab-menu.html">
-    <link href="http://nateharr.is/lib/ion-floating-menu/dist/ion-floating-menu.css" rel="stylesheet" type="text/css" />
+    <link href="http://nateharr.is/lib/ion-floating-menu/dist/ion-floating-menu.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
     <!---end Material Design Elements--->
 
@@ -212,139 +224,141 @@
 
 <body>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
 
-    <div id="socialbar">
-        <table style="float: right;">
+<div id="socialbar">
+    <table style="float: right;">
+        <tr>
+            <td>
+                <a href="https://twitter.com/nwithan8" class="twitter-follow-button" data-show-count="false">Follow
+                    @nwithan8</a>
+                <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </td>
+            <td>
+                <a class="github-button" href="https://github.com/nwithan8" data-size="large"
+                   aria-label="Follow @ntkme on GitHub">Follow @nwithan8</a>
+                <script async defer src="https://buttons.github.io/buttons.js"></script>
+            </td>
+            <td>
+                <a href="mailto:n8gr8gbln@gmail.com">
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--red accent mdl-color-text--accent-contrast"
+                            id="email">Email<i class="material-icons">email</i>
+                    </button>
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="mdl-grid" id="name">
+
+    <div class="mdl-cell mdl-cell--12-col mdl-cell--middle">
+        <table>
             <tr>
                 <td>
-                    <a href="https://twitter.com/nwithan8" class="twitter-follow-button" data-show-count="false">Follow @nwithan8</a>
-                    <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </td>
-                <td>
-                    <a class="github-button" href="https://github.com/nwithan8" data-size="large" aria-label="Follow @ntkme on GitHub">Follow @nwithan8</a>
-                    <script async defer src="https://buttons.github.io/buttons.js"></script>
-                </td>
-                <td>
-                    <a href="mailto:n8gr8gbln@gmail.com">
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--red accent mdl-color-text--accent-contrast" id="email">Email<i class="material-icons">email</i>
-                    </button>
-                    </a>
+                    <h1 class="name">Nathan Harris
+                    </h1>
+                    <p class="intro" id="profile">
+                        <i>I'm a tech addict with a bad habit of writing news articles.</i></p>
+                    <div id="socialname">
+                        <div>
+                            <p class="small" style="float-right"><a href="https://twitter.com/nwithan8"
+                                                                    class="twitter-follow-button"
+                                                                    data-show-count="false">Follow @nwithan8</a>
+                                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            </p>
+                            <p class="small" style="float-right">
+                                <a class="github-button" href="https://github.com/nwithan8" data-size="large"
+                                   aria-label="Follow @ntkme on GitHub">Follow @nwithan8</a>
+                                <script async defer src="https://buttons.github.io/buttons.js"></script>
+                            </p>
+                            <a href="mailto:n8gr8gbln@gmail.com">
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--red accent mdl-color-text--accent-contrast"
+                                        id="email">Email
+                                    <i class="material-icons">email</i>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
                 </td>
             </tr>
         </table>
     </div>
+</div>
+<center>
 
-    <div class="mdl-grid" id="name">
-
-        <div class="mdl-cell mdl-cell--12-col mdl-cell--middle">
-            <table>
-                <tr>
-                    <td>
-                        <h1 class="name">Nathan Harris
-                        </h1>
-                        <p class="intro" id="profile">
-                            <i>I'm a tech addict with a bad habit of writing news articles.</i></p>
-                        <div id="socialname">
-                            <div>
-                                <p class="small" style="float-right"><a href="https://twitter.com/nwithan8" class="twitter-follow-button" data-show-count="false">Follow @nwithan8</a>
-                                    <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                                </p>
-                                <p class="small" style="float-right">
-                                    <a class="github-button" href="https://github.com/nwithan8" data-size="large" aria-label="Follow @ntkme on GitHub">Follow @nwithan8</a>
-                                    <script async defer src="https://buttons.github.io/buttons.js"></script>
-                                </p>
-                                <a href="mailto:n8gr8gbln@gmail.com">
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--red accent mdl-color-text--accent-contrast" id="email">Email
-                                        <i class="material-icons">email</i>
-                                    </button>
-                                </a>
-                            </div>
-                        </div>
-                        <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </div>
-    <center>
-
-        <div id="footer">
-            <hr>
-            <main class="mdl-layout__content">
-                <section class="mdl-grid mdl-grid">
-                    <div class="mdl-card mdl-cell mdl-cell--4-col mdl-shadow--2dp">
-                        <div class="mdl-card__supporting-text">
-                            <h3>Journalism</h3>
-                            <p style="line-height:140%">Community Reporter at <em>The Zanesville Times Recorder</em>
-                            </p>
-                        </div>
-                        <div class="mdl-card__actions">
-                            <a href="https://muckrack.com/nwithan8" class="mdl-button">Portfolio</a>
-                            <a href="files/resume.pdf" class="mdl-button">R&eacutesum&eacute</a>
-                            <div class="dropup">
-                                <a href="extra.html" class="mdl-button dropbtn">Security</a>
-                                <div class="dropup-content">
-                                    <a href="https://keybase.io/nwithan8">Keybase</a>
-                                    <a href="files/Nate_Harris_PGP_key.asc">GPG Key</a>
-                                    <a href="https://hawkpost.co/box/c008e2ae-7db7-4a34-8689-71bb5ad9ea89">Email</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        </div>
-                    <div class="mdl-card mdl-cell mdl-cell--4-col mdl-shadow--2dp">
-                        <div class="mdl-card__supporting-text">
-                            <h3>Technology</h3>
-                            <p style="line-height:140%">An avid fan of consumer electronics, from smartphones and wearables to computers and voice assistants.
-                        </div>
-                        <div class="mdl-card__actions">
-                            <div class="dropup">
-                                <p class="mdl-button dropbtn">Media</p>
-                                <div class="dropup-content">
-                                    <a href="https://www.youtube.com/NateHarris/videos">YouTube</a>
-                                    <div class="sideup">
-                                        <a href="https://feeds.feedburner.com/technicallyspeakingpodcast" class="dropbtn">Podcast</a>
-                                        <div>
-                                            <iframe class="sideup-content" style="width: 300px;"sandbox="allow-same-origin allow-scripts allow-top-navigation allow-popups" scrolling=no width="100%" height="185" frameborder="0" src="https://embed.radiopublic.com/e?if=technically-speaking-GOMv9V"></iframe>
-                                                
-                                        </div>
+    <div id="footer">
+        <hr>
+        <main class="mdl-layout__content">
+            <section class="mdl-grid mdl-grid">
+                <div class="mdl-card mdl-cell mdl-cell--4-col mdl-shadow--2dp">
+                    <div class="mdl-card__supporting-text">
+                        <h3>Technology</h3>
+                        <p style="line-height:140%">Software Engineer for Developer Experience at <a
+                                href="https://www.easypost.com/"><b><em>EasyPost</em></b></a></p>.
+                    </div>
+                    <div class="mdl-card__actions">
+                        <div class="dropup">
+                            <p class="mdl-button dropbtn">Media</p>
+                            <div class="dropup-content">
+                                <a href="https://www.youtube.com/NateHarris/videos">YouTube</a>
+                                <div class="sideup">
+                                    <a href="https://feeds.feedburner.com/technicallyspeakingpodcast" class="dropbtn">Podcast</a>
+                                    <div>
+                                        <iframe class="sideup-content" style="width: 300px;"
+                                                sandbox="allow-same-origin allow-scripts allow-top-navigation allow-popups"
+                                                scrolling=no width="100%" height="185" frameborder="0"
+                                                src="https://embed.radiopublic.com/e?if=technically-speaking-GOMv9V"></iframe>
                                     </div>
                                 </div>
                             </div>
-                            <a href="https://github.com/nwithan8" class="mdl-button">GitHub</a>
-                            <div class="dropup">
-                                <p class="mdl-button dropbtn">Join my Minecraft server</p>
-                                <div class="dropup-content">
-                                    <a href="https://minecraft.net/en-us/download/">Download Minecraft</a>
-                                    <p>mc.nateharr.is</p>
-                                </div>
+                        </div>
+                        <a href="https://github.com/nwithan8" class="mdl-button">GitHub</a>
+                        <a href="http://repo.nateharr.is" class="mdl-button">Public repository</a>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-cell mdl-cell--4-col mdl-shadow--2dp">
+                    <div class="mdl-card__supporting-text">
+                        <h3>Journalism (Retired)</h3>
+                        <p style="line-height:140%">Former Community Reporter at <a
+                                href="https://www.zanesvilletimesrecorder.com/"><b><em>The Zanesville Times
+                            Recorder</em></b></a>
+                        </p>
+                    </div>
+                    <div class="mdl-card__actions">
+                        <a href="https://muckrack.com/nwithan8" class="mdl-button">Portfolio</a>
+                        <div class="dropup">
+                            <a href="extra.html" class="mdl-button dropbtn">Security</a>
+                            <div class="dropup-content">
+                                <a href="https://keybase.io/nwithan8">Keybase</a>
+                                <a href="files/Nate_Harris_PGP_key.asc">GPG Key</a>
+                                <a href="https://hawkpost.co/box/c008e2ae-7db7-4a34-8689-71bb5ad9ea89">Email</a>
                             </div>
-                            <a href="http://repo.nateharr.is" class="mdl-button">Public repository</a>
                         </div>
                     </div>
-                    <div class="mdl-card mdl-cell mdl-cell--4-col mdl-shadow--2dp">
-                        <div class="mdl-card__supporting-text">
-                            <h3>School</h3>
-                            <p style="line-height:140%">Assignments for my classes at The University of Georgia
-                        </div>
-                        <div class="mdl-card__actions">
-                            <a href="NM/nmindex2.html" class="mdl-button">New Media Projects</a>
-                            <a href="WD/BandProject/WebContent/WelcomePage.html" class="mdl-button">Web Development Final Project</a>
-                            <a href="CG/cgindex.html" class="mdl-button">Computer Graphics Projects</a>
-                            <a href="http://www.collegeatallcosts.com/index.html" class="mdl-button">Education Investigation Website</a>
-                        </div>
+
+                </div>
+                <div class="mdl-card mdl-cell mdl-cell--4-col mdl-shadow--2dp">
+                    <div class="mdl-card__supporting-text">
+                        <h3>Archive</h3>
+                        <p style="line-height:140%">Old projects from university and past lives.</p>
                     </div>
-                </section>
+                    <div class="mdl-card__actions">
+                        <a href="https://github.com/nwithan8/UGAArchive" class="mdl-button">University of Georgia</a>
+                        <a href="https://github.com/nwithan8/Bots" class="mdl-button">Bots</a>
+                    </div>
+                </div>
+            </section>
 
-            </main>
+        </main>
 
-        </div>
-    </center>
+    </div>
+</center>
 </body>
 
 </html>
