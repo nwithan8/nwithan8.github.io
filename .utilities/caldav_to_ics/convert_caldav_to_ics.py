@@ -19,11 +19,7 @@ def export_calendar(caldav_uri: str, caldav_username: str, caldav_password: str,
         for subcomponent in import_event.icalendar_instance.subcomponents:
             export_cal.add_component(subcomponent)
 
-    output_folder = 'out'
-    output_file = os.path.join(f'{output_folder}/{output_file}.ics')
-
-    os.makedirs(output_folder, exist_ok=True)
-    with open(output_file, 'wb') as f:
+    with open(f"{output_file}.ics", 'wb') as f:
         export_cal_as_ical = export_cal.to_ical()
         f.write(export_cal_as_ical)
 

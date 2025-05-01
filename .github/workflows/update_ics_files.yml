@@ -40,7 +40,7 @@ jobs:
       - name: Move file
         run: |
           mkdir -p ${{ steps.vars.outputs.ICS_FILE_LOCATION }} || true
-          mv ${{ steps.vars.outputs.CALDAV_TO_ICS_TOOL_DIR }}/out/${{ steps.vars.outputs.ICS_FILE_NAME }}.ics ${{ steps.vars.outputs.ICS_FILE_LOCATION }}/${{ steps.vars.outputs.ICS_FILE_NAME }}.ics
+          mv ${{ steps.vars.outputs.ICS_FILE_NAME }}.ics ${{ steps.vars.outputs.ICS_FILE_LOCATION }}/${{ steps.vars.outputs.ICS_FILE_NAME }}.ics
 
       - name: Commit new ICS file
         uses: EndBug/add-and-commit@v9
