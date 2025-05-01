@@ -1,0 +1,51 @@
+name: Update ICS files
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Every day at midnight UTC
+  workflow_dispatch: # Allows manual triggering of the workflow
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  update_scribble_calendar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up variables
+        id: vars
+        run: |
+          echo "CALDAV_TO_ICS_TOOL_DIR=.utilities/caldav_to_ics" >> "$GITHUB_OUTPUT"
+          echo "ICS_FILE_NAME=Scribble" >> "$GITHUB_OUTPUT"
+          echo "ICS_FILE_LOCATION=files" >> "$GITHUB_OUTPUT"
+
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r ${{ steps.vars.outputs.CALDAV_TO_ICS_TOOL_DIR }}/requirements.txt
+
+      - name: Run CalDAV to ICS Python script
+        run: |
+          python ${{ steps.vars.outputs.CALDAV_TO_ICS_TOOL_DIR }}/convert_caldav_to_ics.py ${{ secrets.CALDAV_URL }} ${{ secrets.CALDAV_USERNAME }} ${{ secrets.CALDAV_PASSWORD }} ${{ secrets.CALDAV_CALENDAR_NAME }} ${{ steps.vars.outputs.ICS_FILE_NAME }}
+
+      - name: Move file
+        run: |
+          mkdir -p ${{ steps.vars.outputs.ICS_FILE_LOCATION }} || true
+          mv ${{ steps.vars.outputs.CALDAV_TO_ICS_TOOL_DIR }}/out/${{ steps.vars.outputs.ICS_FILE_NAME }}.ics ${{ steps.vars.outputs.ICS_FILE_LOCATION }}/${{ steps.vars.outputs.ICS_FILE_NAME }}.ics
+
+      - name: Commit new ICS file
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: '${{ steps.vars.outputs.ICS_FILE_LOCATION }}/${{ steps.vars.outputs.ICS_FILE_NAME }}.ics'
+          default_author: github_actions
+          message: "Update Scribble calendar ICS file" # Triggers the deployment to GitHub Pages
+          push: '--force'

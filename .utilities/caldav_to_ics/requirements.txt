@@ -1,0 +1,2 @@
+caldav~=1.4.0
+icalendar~=6.1.3
