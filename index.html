@@ -214,6 +214,9 @@
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
     <!---end Material Design Elements--->
 
+    <!--- GitHub cards -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
     <!---scripts--->
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
@@ -231,37 +234,6 @@
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
 
-<div id="socialbar">
-    <table style="float: right;">
-        <tr>
-            <td>
-                <a href="https://twitter.com/nwithan8" class="twitter-follow-button" data-show-count="false">Follow
-                    @nwithan8</a>
-                <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </td>
-            <td>
-                <a href="https://mas.to/@nwithan8" rel="me">
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--purple accent mdl-color-text--accent-contrast"
-                            id="mastodon"><i class="fab fa-mastodon"></i> Follow @nwithan8
-                    </button>
-                </a>
-            </td>
-            <td>
-                <a class="github-button" href="https://github.com/nwithan8" data-size="large"
-                   aria-label="Follow @ntkme on GitHub">Follow @nwithan8</a>
-                <script async defer src="https://buttons.github.io/buttons.js"></script>
-            </td>
-            <td>
-                <a href="mailto:n8gr8gbln@gmail.com">
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--red accent mdl-color-text--accent-contrast"
-                            id="email"><i class="material-icons">email</i> Email
-                    </button>
-                </a>
-            </td>
-        </tr>
-    </table>
-</div>
-
 <div class="mdl-grid" id="name">
 
     <div class="mdl-cell mdl-cell--12-col mdl-cell--middle">
@@ -271,28 +243,43 @@
                     <h1 class="name">Nathan Harris
                     </h1>
                     <p class="intro" id="profile">
-                        <i>I'm a tech addict with a bad habit of writing news articles.</i></p>
+                        <i>I'm a tech addict with a bad habit of writing news articles.</i>
+                    </p>
                     <div id="socialname">
                         <div>
-                            <p class="small" style="float-right"><a href="https://twitter.com/nwithan8"
-                                                                    class="twitter-follow-button"
-                                                                    data-show-count="false">Follow @nwithan8</a>
-                                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            <p class="small" style="float-right">
+                                <a id="github-follow-button"
+                                   class="github-button"
+                                   href="https://github.com/nwithan8"
+                                   data-color-scheme="no-preference: dark; light: light; dark: dark;"
+                                   data-size="large"
+                                   data-show-count="true"
+                                   aria-label="Follow @nwithan8 on GitHub">
+                                    Follow @nwithan8
+                                </a>
                             </p>
                             <p class="small" style="float-right">
-                                <a class="github-button" href="https://github.com/nwithan8" data-size="large"
-                                   aria-label="Follow @ntkme on GitHub">Follow @nwithan8</a>
-                                <script async defer src="https://buttons.github.io/buttons.js"></script>
+                                <a id="github-donate-button"
+                                   class="github-button"
+                                   href="https://github.com/sponsors/nwithan8"
+                                   data-color-scheme="no-preference: dark; light: light; dark: dark;"
+                                   data-icon="octicon-heart"
+                                   data-size="large"
+                                   aria-label="Donate to @nwithan8 on GitHub">
+                                    Donate
+                                </a>
                             </p>
-                            <a href="mailto:n8gr8gbln@gmail.com">
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--red accent mdl-color-text--accent-contrast"
-                                        id="email">Email
-                                    <i class="material-icons">email</i>
-                                </button>
-                            </a>
+                            <p class="small" style="float-right">
+                                <a href="mailto:n8gr8gbln+nateharr.is@gmail.com">
+                                    <button id="email-me-button"
+                                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--red accent mdl-color-text--accent-contrast">
+                                        Email
+                                        <i class="material-icons">email</i>
+                                    </button>
+                                </a>
+                            </p>
                         </div>
                     </div>
-                    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
                 </td>
             </tr>
         </table>
