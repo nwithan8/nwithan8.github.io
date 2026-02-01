@@ -79,7 +79,7 @@ function encryptSend() {
 };
 
 function sendEmail(message, senderKey) {
-    var link = "mailto:n8gr8gbln@gmail.com?subject=New%20Encrypted%20Message&body=";
+    var link = "mailto:gpgdemo@nateharr.is?subject=New%20Encrypted%20Message&body=";
     var finalEncryptedMessage = "";
     var lines = message.split("\n");
     for (i = 0; i < lines.length; i++) {
@@ -105,5 +105,5 @@ function sendEmail(message, senderKey) {
     link = link + finalEncryptedMessage + senderPGPMessage;
     console.log(link);
     
-    document.location = "mailto:n8gr8gbln@gmail.com?subject=New%20Encrypted%20Message&body=" + finalEncryptedMessage + "%0D%0ASent from: " + email + "%0D%0A[copy and paste your PUBLIC key here]";
+    document.location = "mailto:gpgdemo@nateharr.is?subject=New%20Encrypted%20Message&body=" + finalEncryptedMessage + "%0D%0ASent from: " + email + "%0D%0A[copy and paste your PUBLIC key here]";
 };
